@@ -26,10 +26,5 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Th
 
 ================================================================================
 
-☆ https://t.me/admmanagerfree ☆
+☆ https://bit.ly/thonyblog ☆
 =================================================
-TEAM [ ILLUMINATI ⃘⃤꙰✰ ] @El_Gato "Su Servidor Chile Viva mi RAZA Hijos de la gran PUTA"
-
-Saludos al grupo Oficial de Whatsapp:
-
-[ FULL SCRIPTS ⃘⃤꙰✰ ] && VPS

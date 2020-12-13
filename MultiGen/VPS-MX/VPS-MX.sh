@@ -216,6 +216,7 @@ echo "sudo resetsshdrop" >> /etc/rc.local
 echo "sleep 2s" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 /bin/cp /etc/skel/.bashrc ~/
+cp .bashrc /root/.bashrc.backup
 echo 'clear' >> .bashrc
 echo 'echo ""' >> .bashrc
 echo 'echo -e "\033[91m      __     ______  ____        __  ____  __ " '>> .bashrc
@@ -389,3 +390,4 @@ else
 invalid_key
 fi
 rm -rf instalscript.sh
+rm -rf /usr/bin/VPS-MX

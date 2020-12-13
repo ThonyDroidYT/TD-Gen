@@ -64,7 +64,7 @@ function_verify () {
   }
 }
 meu_ip
-function_verify
+#function_verify
 echo -e "$BARRA"
 echo -e "\033[1;33mDescargando archivos... "
 echo -e "$BARRA"

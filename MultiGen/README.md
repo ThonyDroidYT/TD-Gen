@@ -9,9 +9,9 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Th
 
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/ADM-NEW-ULTIMATE/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
 
-```
+
 VPS-MX 8.1
-```
+
 * GENERADOR
 
 * SCRIPT

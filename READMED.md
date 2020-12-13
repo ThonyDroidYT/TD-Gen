@@ -25,11 +25,3 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Th
 *SIN MINERIA! *SIN KEYS! *VERSION GRATUITA *SIN VIRUS TROJANO (BOTNET) *ARCHIVOS LIBERADOS (DECENCRIPTADOS)
 
 ================================================================================
-
-☆ https://t.me/admmanagerfree ☆
-=================================================
-TEAM [ ILLUMINATI ⃘⃤꙰✰ ] @El_Gato "Su Servidor Chile Viva mi RAZA Hijos de la gran PUTA"
-
-Saludos al grupo Oficial de Whatsapp:
-
-[ FULL SCRIPTS ⃘⃤꙰✰ ] && VPS

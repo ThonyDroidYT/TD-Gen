@@ -462,15 +462,17 @@ clear
 msg -bar
 msg -ama "          ¿ DESEA DESINSTALAR SCRIPT ?"
 msg -bar
-echo -e " Esto borrara todos los archivos del scrip VPS_MX"
+echo -e " Esto borrara todos los archivos del scrip VPS-MX Acepta?"
 msg -bar
 while [[ ${yesno} != @(s|S|y|Y|n|N) ]]; do
 read -p " [S/N]: " yesno
 tput cuu1 && tput dl1
 done
 if [[ ${yesno} = @(s|S|y|Y) ]]; then
-rm -rf /root/.bashrc &>/dev/null
-cp /root/.bashrc.backup /root/.bashrc &>/dev/null
+rm /root/.bashrc
+cp /root/.bashrc.backup /root/.bashrc
+#rm /root/.bashrc &>/dev/null
+#cp /root/.bashrc.backup /root/.bashrc &>/dev/null
 rm -rf ${SCPdir} &>/dev/null
 rm -rf ${SCPusr} &>/dev/null
 rm -rf ${SCPinst} &>/dev/null

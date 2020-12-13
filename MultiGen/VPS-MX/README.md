@@ -7,6 +7,10 @@ sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.c
 sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/install/gen.sh; chmod 777 gen.sh; ./gen.sh
 
 =======================================================================
+Instalar Script
+
+sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/instalscript.sh; chmod 777 instalscript.sh; ./instalscript.sh
+=======================================================================
 
 INSTALADOR DEL GENERADOR
 

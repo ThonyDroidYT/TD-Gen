@@ -398,7 +398,7 @@ rm $HOME/instger.sh &>/dev/null
 links_inst  () {
 echo -e "\e[97m\033[1;41m   =====>>►► LINKS INSTALL SCRIPT VPS•MX ◄◄<<=====   \033[1;37m"
 msg -bar
-echo -e "\033[1;37msudo apt update -y; apt upgrade -y; wget http://$(wget -qO- ipv4.icanhazip.com):81/instalscript.sh &> /dev/null; chmod 777 instalscript.sh* && ./instalscript.sh*"
+echo -e "\033[1;37msudo apt update -y; apt upgrade -y; wget http://$(wget -qO- ipv4.icanhazip.com):81/instalscript.sh &> /dev/null; chmod 777 instalscript.sh; ./instalscript.sh"
 msg -bar
 read -p "Enter para Finalizar"
 }

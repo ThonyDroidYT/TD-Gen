@@ -4,7 +4,7 @@ Generador de keys para instalar el generador usando el link oficial
 
 sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/instgerador.sh; chmod 777 instgerador.sh; ./instgerador.sh
 
-sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/rudi9999/Generador_Gen_VPS-MX/master/gen.sh; chmod 777 gen.sh; ./gen.sh
+sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/install/gen.sh; chmod 777 gen.sh; ./gen.sh
 
 =======================================================================
 

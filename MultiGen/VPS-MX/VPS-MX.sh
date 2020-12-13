@@ -218,8 +218,8 @@ echo "exit 0" >> /etc/rc.local
 /bin/cp /etc/skel/.bashrc ~/
 #cp .bashrc /root/.bashrc.backup &> /dev/null 
 #cp /etc/bash.bashrc /etc/bash.bashrc-backup &> /dev/null
-#cp .bashrc /root/.bashrc.backup
-#cp /etc/bash.bashrc /etc/bash.bashrc-backup
+cp .bashrc /root/.bashrc.backup
+cp /etc/bash.bashrc /etc/bash.bashrc-backup
 echo 'clear' >> .bashrc
 echo 'echo ""' >> .bashrc
 echo 'echo -e "\033[91m      __     ______  ____        __  ____  __ " '>> .bashrc

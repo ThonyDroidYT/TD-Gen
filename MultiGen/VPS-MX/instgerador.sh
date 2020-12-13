@@ -49,17 +49,17 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 echo "$IP" > /usr/bin/vendor_code
 }
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/Generador_Gen_VPS-MX/master/Control-IP")
+  permited=$(curl -sSL "https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/install/Control-IP")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   echo -e "\n\n\n\033[1;31m====================================================="
   echo -e "\033[1;31m       ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
-  echo -e "\033[1;31m                CONTACTE A @Rufu99"
+  echo -e "\033[1;31m                CONTACTE A @Thony_DroidYT"
   echo -e "\033[1;31m=====================================================\n\n\n"
   [[ -d /etc/SCRIPT ]] && rm -rf /etc/SCRIPT
   exit 1
   } || {
   ### INTALAR VERCION DE SCRIPT
-  v1=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/Generador_Gen_VPS-MX/master/Vercion")
+  v1=$(curl -sSL "https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/install/Vercion")
   echo "$v1" > /etc/versin_script
   }
 }

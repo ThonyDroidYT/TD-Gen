@@ -4,9 +4,10 @@ clear
 #ACTULIZADOR
 rm -rf instalscript.sh &>/dev/null
 [[ ! -e /etc/versin_script ]] && echo 1 > /etc/versin_script
-v11=$(cat /etc/versin_script_new) 
+v11=$(cat /etc/versin_script_new)
 v22=$(cat /etc/versin_script)
-[[ $v11 = $v22 ]] && vesaoSCT="\033[1;32mVPS•MX (v$v22)\033[1;97m #OFICIAL ®️ \033[1;31m]" || vesaoSCT="\033[1;31mVPS•MX (v$v22) ► \033[1;32mVPS•MX (v$v11)\033[1;31m]" 
+#[[ $v11 = $v22 ]] && vesaoSCT="\033[1;32mVPS•MX (v$v22)\033[1;97m #OFICIAL ®️ \033[1;31m]" || vesaoSCT="\033[1;31mVPS•MX (v$v22) ► \033[1;32mVPS•MX (v$v11)\033[1;31m]"
+[[ $v11 = $v22 ]] && vesaoSCT="\033[1;32mVPS•MX (v$v22)\033[1;97m #OFICIAL ®️ \033[1;31m]" || vesaoSCT="\033[1;31mVPS•MX (v$v22) ► \033[1;32mVPS•MX (v$v11)\033[1;31m]"
 _hora=$(printf '%(%D-%H:%M:%S)T') 
 #COLORES 
 red=$(tput setaf 1)
@@ -215,7 +216,7 @@ SSL+="$Port ";;
 python|python3)
 [[ -z $PY3 ]] && local PY3="\033[1;31m SOCKS/PYTHON: \033[1;32m"
 PY3+="$Port ";;
-v2ray)
+v2ray|v2ray-v2-)
 [[ -z $V2R ]] && local V2R="\033[1;31m V2RAY: \033[1;32m"
 V2R+="$Port ";;
 badvpn-ud)
@@ -468,9 +469,13 @@ read -p " [S/N]: " yesno
 tput cuu1 && tput dl1
 done
 if [[ ${yesno} = @(s|S|y|Y) ]]; then
+rm -rf /root/.bashrc &>/dev/null
+cp /root/.bashrc.backup /root/.bashrc &>/dev/null
 rm -rf ${SCPdir} &>/dev/null
 rm -rf ${SCPusr} &>/dev/null
 rm -rf ${SCPinst} &>/dev/null
+rm -rf ${SCPidioma} &>/dev/null
+rm -rf ${SCPfrm} &>/dev/null
 [[ -e /bin/adm ]] && rm /bin/adm
 [[ -e /usr/bin/adm ]] && rm /usr/bin/adm
 [[ -e /bin/menu ]] && rm /bin/menu

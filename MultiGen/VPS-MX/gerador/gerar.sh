@@ -144,6 +144,14 @@ echo "$BASICINST ${var[$value]}" > /etc/newadm-instalacao
 fi
 done
 }
+
+#BotGen
+bot_menu () {
+CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
+[[ ! -e "${CIDdir}/confbot.sh" ]] && wget -O ${CIDdir}/confbot.sh https://raw.githubusercontent.com/rudi9999/TeleBotGen/master/confbot.sh &> /dev/null && chmod +x ${CIDdir}/confbot.sh
+source ${CIDdir}/confbot.sh
+bot_conf
+}
 fun_list () {
 rm ${SCPT_DIR}/*.x.c &> /dev/null
 unset KEY
@@ -417,9 +425,10 @@ echo -e "\033[1;32m[6] \033[1;31m> \033[1;37mVER LINKS DE INSTALACION"
 echo -e "\033[1;32m[7] \033[1;31m> \033[1;37mCAMBIAR CREDITOS"
 echo -e "\033[1;32m[8] \033[1;31m> \033[1;37mVER REGISTRO"
 echo -e "\033[1;32m[9] \033[1;31m> \033[1;37m[!] \033[1;32mACTUALIZAR GENERADOR"
+echo -e "\033[1;32m[10] \033[1;31m> \033[1;37m \033[1;32mBOT GENERADOR"
 msg -bar && echo -ne "$(msg -verd "[0]") $(msg -verm2 ">") "&& msg -bra "\033[1;41mSALIR DEL SCRIPT"
 msg -bar
-while [[ ${varread} != @([0-9]) ]]; do
+while [[ ${varread} != @([0-10]) ]]; do
 read -p "Opcion: " varread
 done
 msg -bar
@@ -445,5 +454,7 @@ cat /etc/gerar-sh-log 2>/dev/null || echo "NINGUN REGISTRO EN ESTE MOMENTO"
 echo -ne "\033[0m" && read -p "Enter"
 elif [[ ${varread} = 9 ]]; then
 atualizar_geb
+elif [[ ${varread} = 10 ]]; then
+bot_menu
 fi
 /usr/bin/gerar.sh

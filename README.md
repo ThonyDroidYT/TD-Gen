@@ -18,7 +18,7 @@ apt-get update -y; apt-get upgrade -y; wget https://www.dropbox.com/s/s4k7ovuimv
 
 INSTALADOR ALTERNATIVO
 
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/GENERADOR-NEW-ULTIMATE-ORIGINAL/master/instalar.sh; chmod 777 instalar.sh* && ./instalar.sh*
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/instgerador.sh; chmod 777 instalar.sh* && ./instalar.sh*
 
 ================================================================================
 

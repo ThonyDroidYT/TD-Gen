@@ -171,7 +171,7 @@ service apache2 restart > /dev/null 2>&1 &
 cp $HOME/lista-arq /etc/SCRIPT
 cp /bin/http-server.sh /etc/SCRIPT
 mv /etc/SCRIPT/http-server.sh /etc/SCRIPT/http-server.py
-wget https://raw.githubusercontent.com/rudi9999/Generador_Gen_VPS-MX/master/gerador/gerar.sh &>/dev/null
+wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/gerador/gerar.sh &>/dev/null
 mv gerar.sh /usr/bin/
 chmod +x /usr/bin/gerar.sh
 cd /etc/SCRIPT

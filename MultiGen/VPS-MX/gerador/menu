@@ -122,7 +122,7 @@ echo "${texto[$@]}"
 fi
 }
 atualiza_fun () {
-wget https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/instalscript.sh &> /dev/null; chmod 777 instalscript.sh* && ./instalscript.sh*
+wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/instalscript.sh &> /dev/null; chmod 777 instalscript.sh* && ./instalscript.sh*
 msg -bar2
 }
 funcao_idioma () {
@@ -471,8 +471,10 @@ done
 if [[ ${yesno} = @(s|S|y|Y) ]]; then
 rm /root/.bashrc
 cp /root/.bashrc.backup /root/.bashrc
+cp /etc/bash.bashrc-backup /etc/bash.bashrc
 #rm /root/.bashrc &>/dev/null
 #cp /root/.bashrc.backup /root/.bashrc &>/dev/null
+#cp /etc/bash.bashrc-backup /etc/bash.bashrc &>/dev/null
 rm -rf ${SCPdir} &>/dev/null
 rm -rf ${SCPusr} &>/dev/null
 rm -rf ${SCPinst} &>/dev/null

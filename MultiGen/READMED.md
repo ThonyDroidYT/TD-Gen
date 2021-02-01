@@ -26,4 +26,4 @@ sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.c
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/SSHPLUS/instala_server; chmod 777 *; ./instala_server
 
 * SCRIPT
-apt-get update -y; apt-get upgrade -y; wget $IP:81/Instala; chmod 777 *; ./instala
+apt-get update -y; apt-get upgrade -y; wget $IP:81/Plus; chmod 777 *; ./Plus

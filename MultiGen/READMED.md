@@ -19,5 +19,10 @@ sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.c
 
 sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX/instalscript.sh; chmod 777 instalscript.sh; ./instalscript.sh
 
+## SSHPLUS
 
+* GENERADOR
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/SSHPLUS/instala_server; chmod 777 *; ./instala_server
+
+* SCRIPT
 

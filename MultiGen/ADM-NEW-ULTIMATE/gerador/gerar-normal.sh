@@ -249,6 +249,13 @@ read -p "NEW MESSAGE: " MSGNEW
 echo "$MSGNEW" > ${SCPT_DIR}/message.txt
 echo -e "$BARRA"
 }
+atualizar_geb () {
+wget -O $HOME/instger.sh https://www.dropbox.com/s/w0s2rv92wy7z3fq/instgerador.sh?dl=0 &>/dev/null
+chmod +x $HOME/instger.sh
+cd $HOME
+./instger.sh
+rm $HOME/instger.sh &>/dev/null
+}
 rmv_iplib () {
 echo -e "SERVIDORES DE KEY ATIVOS!"
 rm /var/www/html/newlib && touch /var/www/html/newlib
@@ -280,9 +287,10 @@ echo -e "[4] = ALTERAR ARQUIVOS KEY BASICA"
 echo -e "[5] = START/STOP KEYGEN $PID_GEN\033[0m"
 echo -e "[6] = VER LOG"
 echo -e "[7] = MUDAR MENSAGEM"
+echo -e "[8] = ATUALIZAR GERADOR"
 echo -e "[0] = SAIR"
 echo -e "$BARRA"
-while [[ ${varread} != @([0-8]) ]]; do
+while [[ ${varread} != @([0-9]) ]]; do
 read -p "Opcao: " varread
 done
 echo -e "$BARRA"
@@ -304,5 +312,7 @@ cat /etc/gerar-sh-log 2>/dev/null || echo "NENHUM LOG NO MOMENTO"
 echo -ne "\033[0m" && read -p "Enter"
 elif [[ ${varread} = 7 ]]; then
 message_gen
+elif [[ ${varread} = 8 ]]; then
+atualizar_geb
 fi
 /usr/bin/gerar.sh

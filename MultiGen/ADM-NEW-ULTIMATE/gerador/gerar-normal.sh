@@ -288,9 +288,10 @@ echo -e "[5] = START/STOP KEYGEN $PID_GEN\033[0m"
 echo -e "[6] = VER LOG"
 echo -e "[7] = MUDAR MENSAGEM"
 echo -e "[8] = ATUALIZAR GERADOR"
+echo -e "[9] = ATUALIZAR KEY FIXA"
 echo -e "[0] = SAIR"
 echo -e "$BARRA"
-while [[ ${varread} != @([0-9]) ]]; do
+while [[ ${varread} != @([0-10]) ]]; do
 read -p "Opcao: " varread
 done
 echo -e "$BARRA"
@@ -314,5 +315,7 @@ elif [[ ${varread} = 7 ]]; then
 message_gen
 elif [[ ${varread} = 8 ]]; then
 atualizar_geb
+elif [[ ${varread} = 9 ]]; then
+att_gen_key
 fi
 /usr/bin/gerar.sh

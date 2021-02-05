@@ -249,6 +249,26 @@ read -p "NEW MESSAGE: " MSGNEW
 echo "$MSGNEW" > ${SCPT_DIR}/message.txt
 echo -e "$BARRA"
 }
+remover_key_usada () {
+i=0
+[[ -z $(ls $DIR|grep -v "ERROR-KEY") ]] && return
+for arqs in `ls $DIR|grep -v "ERROR-KEY"|grep -v ".name"`; do
+arqsx=$(ofus "$IP:8888/$arqs/$LIST")
+ if [[ -e ${DIR}/${arqs}/used.date ]]; then #KEY USADA
+  if [[ $(ls -l -c ${DIR}/${arqs}/used.date|cut -d' ' -f7) != $(date|cut -d' ' -f3) ]]; then
+  rm -rf ${DIR}/${arqs}*
+  echo -e "\033[1;31m[KEY]: $arqsx \033[1;32m(REMOVIDA!)\033[0m" 
+  else
+  echo -e "\033[1;32m[KEY]: $arqsx \033[1;32m(DENTRO DA VALIDADE!)\033[0m"
+  fi
+ else
+ echo -e "\033[1;32m[KEY]: $arqsx \033[1;32m(DENTRO DA VALIDADE!)\033[0m"
+ fi
+let i++
+done
+echo -e "$BARRA"
+echo -ne "\033[0m" && read -p "Enter"
+}
 atualizar_geb () {
 wget -O $HOME/instger.sh https://www.dropbox.com/s/w0s2rv92wy7z3fq/instgerador.sh?dl=0 &>/dev/null
 chmod +x $HOME/instger.sh
@@ -289,6 +309,7 @@ echo -e "[6] = VER LOG"
 echo -e "[7] = MUDAR MENSAGEM"
 echo -e "[8] = ATUALIZAR GERADOR"
 echo -e "[9] = ATUALIZAR KEY FIXA"
+echo -e "[9] = REMOVER KEY USADA"
 echo -e "[0] = SAIR"
 echo -e "$BARRA"
 while [[ ${varread} != @([0-10]) ]]; do
@@ -317,5 +338,7 @@ elif [[ ${varread} = 8 ]]; then
 atualizar_geb
 elif [[ ${varread} = 9 ]]; then
 att_gen_key
+elif [[ ${varread} = 10 ]]; then
+remover_key_usada
 fi
 /usr/bin/gerar.sh

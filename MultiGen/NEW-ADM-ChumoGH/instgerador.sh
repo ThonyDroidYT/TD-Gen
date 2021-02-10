@@ -68,11 +68,11 @@ sleep 1s
 echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 cd ${SCP_DIR}
-wget -i ${SCPT_DIR}/lista > /dev/null 2>&1
-mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
-mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
-chmod 777 /usr/bin/gerar.sh
-chmod 777 /bin/http-server.py
+wget -i ${SCPT_DIR}/lista-arq > /dev/null 2>&1
+[[ ! -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
+[[ ! -e ${SCP_DIR}/http-server.py ]] && mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
+chmod 777 /usr/bin/gerar.sh &>/dev/null
+chmod 777 /bin/http-server.py &>/dev/null
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
 #[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 #} || echo -e "\033[1;31m- \033[1;31mFalha (nao recebido!)"

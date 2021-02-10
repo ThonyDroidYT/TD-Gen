@@ -69,9 +69,9 @@ echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 cd ${SCP_DIR}
 wget -i ${SCPT_DIR}/lista-arq &>/dev/null
-[[ ! -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
-[[ ! -e ${SCP_DIR}/http-server.py ]] && mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
-[[ ! -e ${SCP_DIR}/lista-arq ]] && rm ${SCP_DIR}/lista-arq
+[[ -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
+[[ -e ${SCP_DIR}/http-server.py ]] && mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
+[[ -e ${SCP_DIR}/lista-arq ]] && rm ${SCP_DIR}/lista-arq
 chmod 777 /usr/bin/gerar.sh &>/dev/null
 chmod 777 /bin/http-server.py &>/dev/null
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
@@ -89,7 +89,7 @@ echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
 sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
 service apache2 restart > /dev/null 2>&1 &
 echo "$Key" > $IVAR2
-[[ ! -e ${SCPT_DIR}/lista-arq ]] && rm ${SCPT_DIR}/lista-arq
+[[ -e ${SCPT_DIR}/lista-arq ]] && rm ${SCPT_DIR}/lista-arq
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
 echo -e "\033[1;33m Perfeito, Use o Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Gerenciar as Suas Keys e

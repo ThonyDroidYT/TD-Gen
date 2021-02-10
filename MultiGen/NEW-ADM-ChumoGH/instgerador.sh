@@ -68,6 +68,8 @@ cd ${SCP_DIR}
 wget -i $HOME/lista /dev/null
 mv -f ${SCP_DIR}/gerar.sh /usr/bin/gerar.sh
 mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
+chmod 777 /usr/bin/gerar.sh
+chmod 777 /bin/http-server.py
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
 #[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 #} || echo -e "\033[1;31m- \033[1;31mFalha (nao recebido!)"

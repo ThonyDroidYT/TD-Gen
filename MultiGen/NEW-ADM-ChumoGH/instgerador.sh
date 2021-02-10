@@ -48,10 +48,12 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 echo "$IP" > /usr/bin/vendor_code
 }
 meu_ip
-echo -e "\033[1;33mInstalando Arquivos... "
-echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 apt-get install figlet -y
 apt-get install lolcat -y
+sudo apt autoremove -y
+clear
+echo -e "\033[1;33mInstalando Arquivos... "
+echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/games;
 rm -rf ${SCPT_DIR}/* &>/dev/null
 [[ ! -d ${IVAR} ]] && touch ${IVAR}
@@ -104,7 +106,7 @@ echo -e "\033[1;36m-------------------------------------------------------------
 echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
 echo -e "\033[1;33m Perfeito, Use o Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Gerenciar as Suas Keys e
  Atualizar a Base do servidor"
-echo -e "\033[1;36m--------------------------------------------------------------------\033[0m" } || {
+echo -e "\033[1;36m--------------------------------------------------------------------\033[0m" || {
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 echo -e "\033[1;33mKey Invalida!"
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"

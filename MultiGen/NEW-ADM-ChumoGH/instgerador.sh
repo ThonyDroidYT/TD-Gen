@@ -52,9 +52,8 @@ echo -e "\033[1;33mInstalando Arquivos... "
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 apt-get install figlet -y
 apt-get install lolcat -y
-clear
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/games;
-[[ ! -d ${SCPT_DIR} ]] && rm -rf ${SCPT_DIR}
+rm -rf ${SCPT_DIR}/* &>/dev/null
 [[ ! -d ${IVAR} ]] && touch ${IVAR}
 [[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 cd /etc/SCRIPT/

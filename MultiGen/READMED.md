@@ -26,10 +26,14 @@ sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.c
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/SSHPLUS/instala_server; chmod 777 *; ./instala_server
 
 * SCRIPT
+
 apt-get update -y; apt-get upgrade -y; wget $IP:81/Plus; chmod 777 *; ./Plus
 
 ## NEW-ADM-CHUMOGH
 * SCRIPT
+
 apt-get update -y; apt-get upgrade -y; wget ; chmod 777 instala.sh; ./instala.sh
+
 * GENERADOR
+
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/NEW-ADM-ChumoGH/instgerador.sh! chmod 777 instgerador.sh; ./instgerador.sh

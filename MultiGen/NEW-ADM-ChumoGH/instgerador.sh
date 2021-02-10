@@ -53,7 +53,7 @@ echo -e "\033[1;36m-------------------------------------------------------------
 [[ ! -d ${IVAR} ]] && touch ${IVAR}
 [[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 cd /etc/SCRIPT/
-wget -O /etc/SCRIPT/lista-arq $Domi/$Dire/$Subdire/lista &>/dev/null
+wget -O lista-arq $Domi/$Dire/$Subdire/lista &>/dev/null
 sleep 1s
 #[[ -e $HOME/lista-arq ]] && {
 #for arqx in `cat $HOME/lista-arq`; do
@@ -68,6 +68,8 @@ sleep 1s
 echo -e "\033[1;33mDescargando Archivos \033[0m"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 #cd ${SCP_DIR}
+#NUEVO
+wget -i lista-arq -o /dev/null
 wget -i lista-arq #&>/dev/null
 [[ -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
 [[ -e ${SCP_DIR}/http-server.py ]] && mv -f ${SCP_DIR}/http-server.py /bin/http-server.py

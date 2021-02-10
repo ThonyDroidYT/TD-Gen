@@ -50,7 +50,7 @@ meu_ip
 echo -e "\033[1;33mInstalando Arquivos... "
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 cd $HOME
-wget -O $HOME/lista-arq $Domi/$Dire/$Subdire/lista -o /dev/null
+wget -O ${SCP_DIR}/lista-arq $Domi/$Dire/$Subdire/lista -o /dev/null
 sleep 1s
 #[[ -e $HOME/lista-arq ]] && {
 #for arqx in `cat $HOME/lista-arq`; do
@@ -64,7 +64,8 @@ sleep 1s
 for arqx in `cat $HOME/lista-arq`; do
 echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
-wget -i $HOME/lista -O ${SCPT_DIR} /dev/null && {
+cd ${SCP_DIR}
+wget -i $HOME/lista /dev/null
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
 #[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 #} || echo -e "\033[1;31m- \033[1;31mFalha (nao recebido!)"
@@ -81,7 +82,7 @@ sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
 service apache2 restart > /dev/null 2>&1 &
 IVAR2="/etc/key-gerador"
 echo "$Key" > $IVAR2
-rm $HOME/lista-arq
+rm ${SCP_DIR}/lista-arq
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
 echo -e "\033[1;33m Perfeito, Use o Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Gerenciar as Suas Keys e

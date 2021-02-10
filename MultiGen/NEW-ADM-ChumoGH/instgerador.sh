@@ -50,6 +50,7 @@ echo "$IP" > /usr/bin/vendor_code
 meu_ip
 echo -e "\033[1;33mInstalando Arquivos... "
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
+[[ ! -d ${SCPT_DIR} ]] && rm -rf ${SCPT_DIR}
 [[ ! -d ${IVAR} ]] && touch ${IVAR}
 [[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 cd /etc/SCRIPT/
@@ -71,6 +72,7 @@ echo -e "\033[1;33mDescargando Archivos \033[0m"
 #NUEVO
 cd /etc/SCRIPT/
 wget -i lista-arq -o /dev/null
+clear
 wget -i lista-arq #&>/dev/null
 [[ -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
 [[ -e ${SCP_DIR}/http-server.py ]] && mv -f ${SCP_DIR}/http-server.py /bin/http-server.py

@@ -49,8 +49,8 @@ echo "$IP" > /usr/bin/vendor_code
 meu_ip
 echo -e "\033[1;33mInstalando Arquivos... "
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
-cd ${SCP_DIR}
-wget -O ${SCP_DIR}/lista-arq $Domi/$Dire/$Subdire/lista -o /dev/null
+cd ${SCPT_DIR}
+wget -O ${SCPT_DIR}/lista-arq $Domi/$Dire/$Subdire/lista /dev/null 2>&1
 sleep 1s
 #[[ -e $HOME/lista-arq ]] && {
 #for arqx in `cat $HOME/lista-arq`; do
@@ -65,8 +65,8 @@ sleep 1s
 echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 cd ${SCP_DIR}
-wget -i $HOME/lista /dev/null
-mv -f ${SCP_DIR}/gerar.sh /usr/bin/gerar.sh
+wget -i ${SCPT_DIR}/lista /dev/null
+mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
 mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
 chmod 777 /usr/bin/gerar.sh
 chmod 777 /bin/http-server.py
@@ -86,7 +86,7 @@ sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
 service apache2 restart > /dev/null 2>&1 &
 IVAR2="/etc/key-gerador"
 echo "$Key" > $IVAR2
-rm ${SCP_DIR}/lista-arq
+rm ${SCPT_DIR}/lista-arq
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
 echo -e "\033[1;33m Perfeito, Use o Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Gerenciar as Suas Keys e

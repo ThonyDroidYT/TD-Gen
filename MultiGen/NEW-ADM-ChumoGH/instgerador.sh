@@ -1,6 +1,7 @@
 #!/bin/bash
 IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
+IVAR2="/etc/key-gerador"
 SUB_DOM='base64 -d'
 rm $(pwd)/$0
 Domi="https://raw.githubusercontent.com"
@@ -87,7 +88,6 @@ echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
 [[ $(dpkg --get-selections|grep -w "apache2"|head -1) ]] || apt-get install apache2 -y &>/dev/null
 sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
 service apache2 restart > /dev/null 2>&1 &
-IVAR2="/etc/key-gerador"
 echo "$Key" > $IVAR2
 rm ${SCPT_DIR}/lista-arq
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"

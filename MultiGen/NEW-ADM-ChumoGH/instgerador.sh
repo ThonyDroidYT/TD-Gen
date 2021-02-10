@@ -64,7 +64,7 @@ sleep 1s
 for arqx in `cat $HOME/lista-arq`; do
 echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
-wget -i $HOME/lista -o /dev/null && {
+wget -i $HOME/lista -O ${SCPT_DIR} /dev/null && {
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
 #[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 #} || echo -e "\033[1;31m- \033[1;31mFalha (nao recebido!)"

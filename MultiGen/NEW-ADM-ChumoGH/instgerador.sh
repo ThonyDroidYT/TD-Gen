@@ -60,8 +60,8 @@ sleep 1s
 #[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 #} || echo -e "\033[1;31m- \033[1;31mFalha (nao recebido!)"
 #done
-[[ -e $HOME/lista-arq ]] && {
-for arqx in `cat $HOME/lista-arq`; do
+#[[ -e $HOME/lista-arq ]] && {
+#for arqx in `cat $HOME/lista-arq`; do
 echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 cd ${SCP_DIR}

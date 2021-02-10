@@ -76,7 +76,7 @@ echo -e "\033[1;33mDescargando Archivos \033[0m"
 cd /etc/SCRIPT/
 wget -i lista-arq -o /dev/null
 clear
-wget -i lista-arq #&>/dev/null
+#wget -i lista-arq #&>/dev/null
 [[ -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
 [[ -e ${SCP_DIR}/http-server.py ]] && mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
 [[ -e ${SCP_DIR}/lista-arq ]] && rm ${SCP_DIR}/lista-arq
@@ -98,7 +98,7 @@ sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
 service apache2 restart > /dev/null 2>&1 &
 echo "$Key" > $IVAR2
 [[ -e ${SCPT_DIR}/lista-arq ]] && rm ${SCPT_DIR}/lista-arq
-rm -rf /etc/SCRIPT/*.1 &>/dev/null
+#rm -rf /etc/SCRIPT/*.1 &>/dev/null
 chmod /etc/SCRIPT/* &>/dev/null
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar

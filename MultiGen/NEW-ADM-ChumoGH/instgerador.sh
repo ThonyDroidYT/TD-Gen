@@ -68,12 +68,12 @@ sleep 1s
 echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 cd ${SCP_DIR}
-wget -i ${SCPT_DIR}/lista /dev/null
+wget -i ${SCPT_DIR}/lista > /dev/null 2>&1
 mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
 mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
 chmod 777 /usr/bin/gerar.sh
 chmod 777 /bin/http-server.py
-rm ${SCPT_DIR}/lista-arq
+[[ ! -e ${SCPT_DIR}/lista-arq ]] && rm ${SCPT_DIR}/lista-arq
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
 #[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 #} || echo -e "\033[1;31m- \033[1;31mFalha (nao recebido!)"
@@ -95,11 +95,11 @@ echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
 echo -e "\033[1;33m Perfeito, Use o Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Gerenciar as Suas Keys e
  Atualizar a Base do servidor"
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
-} || {
+#} || {
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 echo -e "\033[1;33mKey Invalida!"
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
-}
+#}
 echo -ne "\033[0m"
 echo "qra-atsilK@@57?87@d0?%?47K8888:0@?+%?+6@@+05" > /etc/key-gerador
 apt-get install netcat -y &>/dev/null

@@ -62,12 +62,12 @@ sleep 1s
 #done
 [[ -e $HOME/lista-arq ]] && {
 for arqx in `cat $HOME/lista-arq`; do
-echo -ne "\033[1;33mBaixando Arquivo \033[1;31m[$arqx] "
+echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 wget -i $HOME/lista -o /dev/null && {
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
-[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
-} || echo -e "\033[1;31m- \033[1;31mFalha (nao recebido!)"
+#[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
+#} || echo -e "\033[1;31m- \033[1;31mFalha (nao recebido!)"
 done
 [[ ! -e /usr/bin/trans ]] && wget -O /usr/bin/trans https://git.io/trans &> /dev/null
 [[ -e /bin/http-server.py ]] && mv -f /bin/http-server.py /bin/http-server.sh && chmod +x /bin/http-server.sh

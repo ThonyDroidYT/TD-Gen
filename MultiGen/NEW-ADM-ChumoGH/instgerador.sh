@@ -49,6 +49,8 @@ echo "$IP" > /usr/bin/vendor_code
 meu_ip
 echo -e "\033[1;33mInstalando Arquivos... "
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
+[[ ! -d ${IVAR} ]] && touch ${IVAR}
+[[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 cd ${SCPT_DIR}
 wget -O ${SCPT_DIR}/lista-arq $Domi/$Dire/$Subdire/lista /dev/null 2>&1
 sleep 1s

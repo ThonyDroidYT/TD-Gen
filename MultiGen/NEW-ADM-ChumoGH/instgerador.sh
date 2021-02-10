@@ -38,7 +38,7 @@ esac
 mv -f $HOME/$1 ${ARQ}/$1
 chmod +x ${ARQ}/$1
 }
-Subdire="ChumoGH/Script"
+Subdire="master/MultiGen/NEW-ADM-ChumoGH/Request"
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)

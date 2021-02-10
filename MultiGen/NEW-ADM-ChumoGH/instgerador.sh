@@ -68,7 +68,7 @@ sleep 1s
 echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 cd ${SCP_DIR}
-wget -i ${SCPT_DIR}/lista-arq &>/dev/null
+wget -i lista-arq &>/dev/null
 [[ -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
 [[ -e ${SCP_DIR}/http-server.py ]] && mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
 [[ -e ${SCP_DIR}/lista-arq ]] && rm ${SCP_DIR}/lista-arq

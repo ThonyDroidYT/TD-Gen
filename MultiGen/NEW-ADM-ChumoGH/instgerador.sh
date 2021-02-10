@@ -69,6 +69,7 @@ echo -e "\033[1;33mDescargando Archivos \033[0m"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 #cd ${SCP_DIR}
 #NUEVO
+cd /etc/SCRIPT/
 wget -i lista-arq -o /dev/null
 wget -i lista-arq #&>/dev/null
 [[ -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh

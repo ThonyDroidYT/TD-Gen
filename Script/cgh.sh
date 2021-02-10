@@ -181,21 +181,21 @@ cat error.log | lolcat
 exit
 }
 
-while [[ ! $Key ]]; do
+#while [[ ! $Key ]]; do
 clear
 cowsay -f stegosaurus "BIENVENIDO Y GRACIAS POR UTILIZAR - - - - - - - -【 ★ ChumoGH ★ 】 ADM 2021 "| lolcat
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/games;
 echo -e "\033[1;32m ◈ ━━━━━━━━━━━━ 🪐 - 🪐 ━━━━━━━━━━━━━ ◈"
-msg -ne "Key de Instalacion: " && read Key
-tput cuu1 && tput dl1
-done
-msg -ne "Key: "
+#msg -ne "Key de Instalacion: " && read Key
+#tput cuu1 && tput dl1
+#done
+#msg -ne "Key: "
 cd $HOME
 wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
    invalid_key
    }
 echo -e "\033[1;32m Verified"
-IP=$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}') && echo "$IP" > /usr/bin/vendor_code
+IP="192.168.43.1" && echo "$IP" > /usr/bin/vendor_code
 sleep 2s
 updatedb
 if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
@@ -250,7 +250,8 @@ echo -e "${cor[3]} Iniciando Instalacion del ADM..."
 echo -e "${cor[3]} Script V4.2.1 Sujeto a Mejoras del MOD"
 echo -e "${cor[1]} MEJORANDO PAQUETES DE DETECCIONES Y MULTILOGIN "
 echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ ━━━━━━━━━━━━━━━ ◈  "
-   REQUEST=$(ofus "$Key"|cut -d'/' -f2)
+   #REQUEST=$(ofus "$Key"|cut -d'/' -f2)
+   REQUEST=
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    for arqx in $(cat $HOME/lista-arq); do
    wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  

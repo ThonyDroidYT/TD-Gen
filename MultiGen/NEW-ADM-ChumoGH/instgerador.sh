@@ -53,7 +53,7 @@ echo -e "\033[1;36m-------------------------------------------------------------
 [[ ! -d ${IVAR} ]] && touch ${IVAR}
 [[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 cd ${SCPT_DIR}
-wget -O ${SCPT_DIR}/lista-arq $Domi/$Dire/$Subdire/lista /dev/null 2>&1
+wget -O ${SCPT_DIR}/lista-arq $Domi/$Dire/$Subdire/lista &>/dev/null
 sleep 1s
 #[[ -e $HOME/lista-arq ]] && {
 #for arqx in `cat $HOME/lista-arq`; do
@@ -68,7 +68,7 @@ sleep 1s
 echo -ne "\033[1;33mBaixando Arquivos"
 #wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 cd ${SCP_DIR}
-wget -i ${SCPT_DIR}/lista-arq > /dev/null 2>&1
+wget -i ${SCPT_DIR}/lista-arq &>/dev/null
 [[ ! -e ${SCPT_DIR}/gerar.sh ]] && mv -f ${SCPT_DIR}/gerar.sh /usr/bin/gerar.sh
 [[ ! -e ${SCP_DIR}/http-server.py ]] && mv -f ${SCP_DIR}/http-server.py /bin/http-server.py
 [[ ! -e ${SCP_DIR}/lista-arq ]] && rm ${SCP_DIR}/lista-arq

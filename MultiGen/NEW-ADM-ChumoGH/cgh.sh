@@ -2,7 +2,6 @@
 # Si llegaste hasta aqui, No Reproduscas Copias de este ADM
 # ERES ADMIRABLE, al lograr llegar hasta aqui
 killall apt apt-get &> /dev/null
-dom='base64 -d'
 cd $HOME
 rm -f instala.* > /dev/null
 [[ $(dpkg --get-selections|grep -w "gawk"|head -1) ]] || apt-get install gawk -y &>/dev/null
@@ -31,6 +30,7 @@ fecha=`date +"%d-%m-%y"`;
 dom='base64 -d'
 SCPdir="/etc/adm-lite"
 SCPinstal="$HOME/install"
+SCParq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Rob255RHJvaWRZVC9URC1HZW4vbWFzdGVyL011bHRpR2VuL05FVy1BRE0tQ2h1bW9HSC9nZXJhZG9y"
 SCPidioma="${SCPdir}"
 SCPusr="${SCPdir}"
 SCPfrm="${SCPdir}"
@@ -181,21 +181,24 @@ cat error.log | lolcat
 exit
 }
 
-while [[ ! $Key ]]; do
+#while [[ ! $Key ]]; do
 clear
 cowsay -f stegosaurus "BIENVENIDO Y GRACIAS POR UTILIZAR - - - - - - - -【 ★ ChumoGH ★ 】 ADM 2021 "| lolcat
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/games;
 echo -e "\033[1;32m ◈ ━━━━━━━━━━━━ 🪐 - 🪐 ━━━━━━━━━━━━━ ◈"
-msg -ne "Key de Instalacion: " && read Key
-tput cuu1 && tput dl1
-done
-msg -ne "Key: "
+#msg -ne "Key de Instalacion: " && read Key
+#tput cuu1 && tput dl1
+#done
 cd $HOME
-wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
+msg -ne "Key: "
+#wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
+wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
    invalid_key
    }
 echo -e "\033[1;32m Verified"
-IP=$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}') && echo "$IP" > /usr/bin/vendor_code
+Key="qra-atsilK0@84%ab97cda8f?K8888:8@@+95+84?+94@"
+IP="192.168.43.1" && echo "$IP" > /usr/bin/vendor_code
+IP2=$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}') && echo "$IP" > /usr/bin/vendor_code
 sleep 2s
 updatedb
 if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
@@ -209,7 +212,7 @@ clear
 locale-gen en_US.UTF-8 > /dev/null 2>&1
 update-locale LANG=en_US.UTF-8 > /dev/null 2>&1
 apt-get install gawk -y > /dev/null 2>&1
-wget -O trans https://raw.githubusercontent.com/ChumoGH/chumogh-gmail.com/master/trans -o /dev/null 2>&1
+wget -O trans https://git.io/trans -o /dev/null 2>&1
 mv -f ./trans /bin/ && chmod 777 /bin/*
 cowsay -f ghostbusters "    ESCOJE TU IDIOMA DE PRERENCIA"| lolcat
 echo -e "${cor[1]}==================================" | lolcat
@@ -250,10 +253,12 @@ echo -e "${cor[3]} Iniciando Instalacion del ADM..."
 echo -e "${cor[3]} Script V4.2.1 Sujeto a Mejoras del MOD"
 echo -e "${cor[1]} MEJORANDO PAQUETES DE DETECCIONES Y MULTILOGIN "
 echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ ━━━━━━━━━━━━━━━ ◈  "
-   REQUEST=$(ofus "$Key"|cut -d'/' -f2)
+   REQUEST2=$(ofus "$Key"|cut -d'/' -f2)
+   REQUEST=$(echo $SCParq|$dom)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    for arqx in $(cat $HOME/lista-arq); do
-   wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
+   wget -O ${SCPinstal}/${arqx} ${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
+   #wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
    done
    fun_bar 
   echo -ne "${cor[4]}"

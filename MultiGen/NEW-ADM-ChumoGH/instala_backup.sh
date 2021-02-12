@@ -1,4 +1,6 @@
 #!/bin/bash
+#Si llegastes hasta aquí estás a punto de convertirte
+#En una rata. Rata clonadores; desencriptadora y roba scripts :'v
 function printTitle
 {
     echo ""
@@ -106,7 +108,8 @@ return
 clear
 
 update_pak
-update1='aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy92eWl5bWQ2dXozZXRvbGwvY2doLnNo'
+#ME LA PELAS RATA :'v
+update1='aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Rob255RHJvaWRZVC9URC1HZW4vbWFzdGVyL011bHRpR2VuL05FVy1BRE0tQ2h1bW9HSC9jZ2guc2g='
 dom='base64 -d'
 RE=$(echo $update1|$dom)
 sleep 2s

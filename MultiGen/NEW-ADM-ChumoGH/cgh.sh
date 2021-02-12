@@ -259,21 +259,18 @@ echo -e "${cor[3]} Iniciando Instalacion del ADM..."
 echo -e "${cor[3]} Script V4.2.1 Sujeto a Mejoras del MOD"
 echo -e "${cor[1]} MEJORANDO PAQUETES DE DETECCIONES Y MULTILOGIN "
 echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ ━━━━━━━━━━━━━━━ ◈  "
-   [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
-   for arqx in $(cat $HOME/lista-arq); do
-   wget -O ${SCPinstal}/${arqx} ${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
-   #wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
-   done
-   fun_bar 
-   #echo -ne "${cor[4]}"
-   valid_fun
-   msg -bar2
-   cd $HOME
-   [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq  
-   [[ -e $HOME/lista ]] && rm $HOME/lista   
-   [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal} 
-   echo " Verified【 匚卄ㄩ爪ㄖᎶ卄 】 ADM 2021" > $HOME/exito
-   install_fim
-#   else
-#invalid_key
-#fi
+[[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
+for arqx in $(cat $HOME/lista-arq); do
+wget -O ${SCPinstal}/${arqx} ${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
+#wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
+done
+fun_bar 
+#echo -ne "${cor[4]}"
+valid_fun
+msg -bar2
+cd $HOME
+[[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq  
+[[ -e $HOME/lista ]] && rm $HOME/lista   
+[[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal} 
+echo " Verified【 匚卄ㄩ爪ㄖᎶ卄 】 ADM 2021" > $HOME/exito
+install_fim

@@ -109,7 +109,7 @@ clear
 
 update_pak
 #ME LA PELAS RATA :'v
-update1='aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Rob255RHJvaWRZVC9URC1HZW4vbWFzdGVyL011bHRpR2VuL05FVy1BRE0tQ2h1bW9HSC9jZ2guc2g='
+update1='aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Rob255RHJvaWRZVC9URC1HZW4vbWFzdGVyL011bHRpR2VuL05FVy1BRE0tQ2h1bW9HSC9jZ2guc2g=qwertyuopasdfh'
 dom='base64 -d'
 RE=$(echo $update1|$dom)
 sleep 2s

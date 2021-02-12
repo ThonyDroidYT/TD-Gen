@@ -194,7 +194,8 @@ echo -e "\033[1;32m ◈ ━━━━━━━━━━━━ 🪐 - 🪐 ━━�
 #done
 cd $HOME
 msg -ne "Key: "
-wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1
+#fun_bar
+fun_bar 'wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1'
 echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"
 #wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
 #wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"# || {

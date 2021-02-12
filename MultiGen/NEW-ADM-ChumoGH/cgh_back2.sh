@@ -192,9 +192,9 @@ echo -e "\033[1;32m ◈ ━━━━━━━━━━━━ 🪐 - 🪐 ━━�
 cd $HOME
 msg -ne "Key: "
 #wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
-wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
-   invalid_key
-   }
+wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"# || {
+#   invalid_key
+#   }
 echo -e "\033[1;32m Verified"
 Key="qra-atsilK0@84%ab97cda8f?K8888:8@@+95+84?+94@"
 IP="192.168.43.1" && echo "$IP" > /usr/bin/vendor_code

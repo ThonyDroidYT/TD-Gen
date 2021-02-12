@@ -217,6 +217,9 @@ update-locale LANG=en_US.UTF-8 > /dev/null 2>&1
 apt-get install gawk -y > /dev/null 2>&1
 wget -O trans https://git.io/trans -o /dev/null 2>&1
 mv -f ./trans /bin/ && chmod 777 /bin/*
+else
+invalid_key
+fi
 cowsay -f ghostbusters "    ESCOJE TU IDIOMA DE PRERENCIA"| lolcat
 echo -e "${cor[1]}==================================" | lolcat
 echo -e "${cor[2]}       (Default : Español)\n${cor[1]}==================================\n${cor[2]}   [1]-BRASILEÑO : [2]-INGLES\n   [3]-ESPAÑOL   : [4]-FRANCES\n   [5]-ITALIANO  : [6]-CHINO"

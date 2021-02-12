@@ -262,8 +262,8 @@ echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ �
    #wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
    done
    fun_bar 
-  echo -ne "${cor[4]}"
-  valid_fun
+   echo -ne "${cor[4]}"
+   valid_fun
    msg -bar2
    cd $HOME
    [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq  

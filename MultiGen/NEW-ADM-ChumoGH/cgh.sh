@@ -1,4 +1,5 @@
 #!/bin/bash
+#cgh_back2.sh
 # Si llegaste hasta aqui, No Reproduscas Copias de este ADM
 # ERES ADMIRABLE, al lograr llegar hasta aqui
 killall apt apt-get &> /dev/null

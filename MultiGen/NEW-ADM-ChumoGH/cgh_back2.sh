@@ -181,6 +181,8 @@ cat error.log | lolcat
 exit
 }
 
+REQUEST2=$(ofus "$Key"|cut -d'/' -f2)
+REQUEST=$(echo $SCParq|$dom)
 #while [[ ! $Key ]]; do
 clear
 cowsay -f stegosaurus "BIENVENIDO Y GRACIAS POR UTILIZAR - - - - - - - -【 ★ ChumoGH ★ 】 ADM 2021 "| lolcat
@@ -253,8 +255,6 @@ echo -e "${cor[3]} Iniciando Instalacion del ADM..."
 echo -e "${cor[3]} Script V4.2.1 Sujeto a Mejoras del MOD"
 echo -e "${cor[1]} MEJORANDO PAQUETES DE DETECCIONES Y MULTILOGIN "
 echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ ━━━━━━━━━━━━━━━ ◈  "
-   REQUEST2=$(ofus "$Key"|cut -d'/' -f2)
-   REQUEST=$(echo $SCParq|$dom)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    for arqx in $(cat $HOME/lista-arq); do
    wget -O ${SCPinstal}/${arqx} ${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  

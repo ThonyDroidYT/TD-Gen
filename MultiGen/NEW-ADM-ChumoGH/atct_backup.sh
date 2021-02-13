@@ -3,7 +3,7 @@ IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
 [[ -d $SCPT_DIR ]] && rm -rf $SCPT_DIR
 SCPresq="aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9wNXYyaGV2cmZqM3BkeGIv"
-https://www.dropbox.com/s/p5v2hevrfj3pdxb/
+#https://www.dropbox.com/s/p5v2hevrfj3pdxb/
 SUB_DOM='base64 -d'
 
 #CORES

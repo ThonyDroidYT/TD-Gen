@@ -160,7 +160,7 @@ esac
 mv -f $HOME/$1 ${ARQ}/$1
 chmod +x ${ARQ}/$1
 }
-
+verif_key () {
 #unset Key
 #echo -e #"\033[1;36m--------------------------------------------------------------------\033[0m"
 #echo -e #"\033[1;36m-----RECUERDA ADQUIRIR EL GENERADOR DE KEYS DE ADM OFICIAL ---------\033[0m"
@@ -180,6 +180,7 @@ chmod +x ${ARQ}/$1
 #echo -e #"\033[1;36m--------------------------------------------------------------------\033[0m"
 #exit
 #}
+}
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)

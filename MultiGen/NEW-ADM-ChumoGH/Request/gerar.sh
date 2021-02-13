@@ -373,7 +373,8 @@ echo "$MSGNEW" > ${SCPT_DIR}/message.txt
 echo -e "$BARRA"
 }
 act_gen () {
-wget -q -O /tmp/actc.sh https://www.dropbox.com/s/2t3j16wa67v92lt/insta.sh
+#wget -q -O /tmp/actc.sh https://www.dropbox.com/s/2t3j16wa67v92lt/insta.sh
+wget -q -O /tmp/actc.sh https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/NEW-ADM-ChumoGH/atct.sh
 chmod +x /tmp/actc.sh
 bash /tmp/actc.sh
 #source <(curl -sL https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/Key-gerar/insta.sh)

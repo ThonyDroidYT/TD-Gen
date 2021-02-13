@@ -48,9 +48,9 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 echo "$IP" > /usr/bin/vendor_code
 }
 meu_ip
-apt-get install figlet -y
-apt-get install lolcat -y
-sudo apt autoremove -y
+apt-get install figlet -y &>/dev/null
+apt-get install lolcat -y &>/dev/null
+sudo apt autoremove -y &>/dev/null
 clear
 echo -e "\033[1;33mInstalando Arquivos... "
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"

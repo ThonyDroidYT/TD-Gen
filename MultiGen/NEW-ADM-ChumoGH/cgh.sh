@@ -199,8 +199,8 @@ fun_bar 'wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1'
 echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"
 #wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
 #wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"# || {
-#   invalid_key
-#   }
+#   #invalid_key
+#   #}
 echo -e "\033[1;32m Verified"
 Key="qra-atsilK0@84%ab97cda8f?K8888:8@@+95+84?+94@"
 IP="192.168.43.1" && echo "$IP" > /usr/bin/vendor_code
@@ -279,5 +279,5 @@ echo " Verified【 匚卄ㄩ爪ㄖᎶ卄 】 ADM 2021" > $HOME/exito
 install_fim
 else
 invalid_key
-#valid_fun
+#update-pack
 fi

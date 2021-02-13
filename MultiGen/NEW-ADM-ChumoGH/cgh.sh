@@ -278,8 +278,8 @@ cd $HOME
 [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal} 
 echo " Verified【 匚卄ㄩ爪ㄖᎶ卄 】 ADM 2021" > $HOME/exito
 install_fim
-else
+#else
 #invalid_key
 #update-pack
-echo -e "\e[1;31mERROR- NO ESTAS PERMITIDO PARA INSTALARLO\e[0m"
-fi
+#echo -e "\e[1;31mERROR- NO ESTAS PERMITIDO PARA INSTALARLO\e[0m"
+#fi

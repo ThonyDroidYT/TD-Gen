@@ -157,9 +157,10 @@ echo -e "${cor[3]} $(source trans -b pt:${id} "AGREGANDO PAQUETES, y SERVICIOS N
 echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━ 🪐 - 🪐 ━━━━━━━━━━━━━━━ ◈"
 chmod +x /etc/adm-lite/*
 instalar_fun
-function_verify
+#function_verify
 sleep 1s 
 }
+
 invalid_key () {
 echo -e ' '
 msg -bar && msg -verm "Key Failed! " && msg -bar
@@ -268,7 +269,7 @@ wget -O ${SCPinstal}/${arqx} ${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_ar
 #wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
 done
 fun_bar 
-#echo -ne "${cor[4]}"
+echo -ne "${cor[4]}"
 valid_fun
 msg -bar2
 cd $HOME
@@ -278,6 +279,7 @@ cd $HOME
 echo " Verified【 匚卄ㄩ爪ㄖᎶ卄 】 ADM 2021" > $HOME/exito
 install_fim
 else
-invalid_key
+#invalid_key
 #update-pack
+echo -e "\e[1;31mERROR- NO ESTAS PERMITIDO PARA INSTALARLO\e[0m"
 fi

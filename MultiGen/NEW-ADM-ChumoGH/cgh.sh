@@ -279,4 +279,5 @@ echo " Verified【 匚卄ㄩ爪ㄖᎶ卄 】 ADM 2021" > $HOME/exito
 install_fim
 else
 invalid_key
+#valid_fun
 fi

@@ -160,25 +160,26 @@ esac
 mv -f $HOME/$1 ${ARQ}/$1
 chmod +x ${ARQ}/$1
 }
-unset Key
-echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
-echo -e "\033[1;36m-----RECUERDA ADQUIRIR EL GENERADOR DE KEYS DE ADM OFICIAL ---------\033[0m"
-echo -e "\033[1;36m--------------------KEY GENERATOR BY ChumoGH ADM----------------------\033[0m"
-echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
-read -p "INTRODUZCA SU KEY DE INSTALACIÓN: " Key
-echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
-[[ ! $Key ]] && {
-echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
-echo -e "\033[1;33mKey inválida! llamame "
-unset key > /dev/null 2>&1 && echo -e "\033[1;31m- \033[1;32mExito!" || echo -e "\033[1;31m- \033[1;31mFallo" > error.log
-cowsay  "☆ChumoGH☆ ADM SCRIPT Te agradece por preferirnos, pero desafortunadamente tu Key es INVALIDA" >> error.log
-echo "Key Invalida, Contacta con el Desarrolador" >> error.log
-echo "  ● Compra Keys al +593987072611 " >> error.log
-echo -e ' t.me/ChumoGH  - @ChumoGH' >> error.log
-cat error.log | lolcat
-echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
-exit
-}
+
+#unset Key
+#echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
+#echo -e "\033[1;36m-----RECUERDA ADQUIRIR EL GENERADOR DE KEYS DE ADM OFICIAL ---------\033[0m"
+#echo -e "\033[1;36m--------------------KEY GENERATOR BY ChumoGH ADM----------------------\033[0m"
+#echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
+#read -p "INTRODUZCA SU KEY DE INSTALACIÓN: " Key
+#echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
+#[[ ! $Key ]] && {
+#echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
+#echo -e "\033[1;33mKey inválida! llamame "
+#unset key > /dev/null 2>&1 && echo -e "\033[1;31m- \033[1;32mExito!" || echo -e "\033[1;31m- \033[1;31mFallo" > error.log
+#cowsay  "☆ChumoGH☆ ADM SCRIPT Te agradece por preferirnos, pero desafortunadamente tu Key es INVALIDA" >> error.log
+#echo "Key Invalida, Contacta con el Desarrolador" >> error.log
+#echo "  ● Compra Keys al +593987072611 " >> error.log
+#echo -e ' t.me/ChumoGH  - @ChumoGH' >> error.log
+#cat error.log | lolcat
+#echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
+#exit
+#}
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)
@@ -189,16 +190,16 @@ meu_ip
 echo -e "\033[1;33mVerificando key... "
 cd $HOME
 REQUEST=$(echo $SCPresq|$SUB_DOM)
-wget -O "$HOME/lista-arq" ${REQUEST}lista > /dev/null 2>&1
+wget -O "${SCRIP_DIR}/lista-arq" ${REQUEST}lista > /dev/null 2>&1
 sleep 1s
 [[ -e $HOME/lista-arq ]] && {
 [[ ! -d ${IVAR} ]] && touch ${IVAR}
 [[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
-cd 
-wget -O lista ${REQUEST}lista -o /dev/null
-atualiza_fun
+cd ${SCRIP_DIR}
+wget -i lista -o /dev/null
+#atualiza_fun
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
-[[ ! -e /usr/bin/trans ]] && wget -O /usr/bin/trans https://www.dropbox.com/s/l6iqf5xjtjmpdx5/trans?dl=0 &> /dev/null
+[[ ! -e /usr/bin/trans ]] && wget -O /usr/bin/trans https://git.io/trans &> /dev/null
 mv -f /bin/http-server.py /bin/http-server.sh && chmod +x /bin/http-server.sh
 apt-get install bc -y &>/dev/null
 apt-get install screen -y &>/dev/null
@@ -212,7 +213,7 @@ IVAR2="/etc/key-gerador"
 echo "$Key" > $IVAR2
 echo $Key > /etc/http-instas
 rm $HOME/lista-arq
-https://www.dropbox.com/s/yurbu0ieo7hn0wg/gerar.sh
+#https://www.dropbox.com/s/yurbu0ieo7hn0wg/gerar.sh
 echo "source <(curl -sSL https://www.dropbox.com/s/yurbu0ieo7hn0wg/gerar.sh)" > /usr/bin/gerar   #https://www.dropbox.com/s/yurbu0ieo7hn0wg/gerar.sh
 chmod +x /usr/bin/gerar
 echo "cd /etc/SCRIPT && bash ./gerar.sh" > /usr/bin/keygen && chmod +x /usr/bin/keygen
@@ -228,7 +229,8 @@ echo -e "\033[1;36m-------------------------------------------------------------
 echo -e "\033[1;33mKey inválida!"
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 }
-echo "qra-atsilK?29@%6087%?66d5K8888:%05+08+@@?+91" > /etc/key-gerador
+Key="qra-atsilK?29@%6087%?66d5K8888:%05+08+@@?+91"
+echo "$Key" > /etc/key-gerador
 apt-get install netcat -y &>/dev/null
 apt install lolcat toilet -y &>/dev/null
 echo -ne "\033[0m" $1

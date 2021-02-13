@@ -189,9 +189,9 @@ echo "$IP" > /usr/bin/vendor_code
 }
 meu_ip
 echo -e "\033[1;33mVerificando key... "
-cd $HOME
+cd ${SCPT_DIR}
 REQUEST=$(echo $SCPresq|$SUB_DOM)
-wget -O "${SCRIP_DIR}/lista-arq" ${REQUEST}lista > /dev/null 2>&1
+wget -O "${SCPT_DIR}/lista-arq" ${REQUEST}lista > /dev/null 2>&1
 sleep 1s
 [[ -e $HOME/lista-arq ]] && {
 [[ ! -d ${IVAR} ]] && touch ${IVAR}

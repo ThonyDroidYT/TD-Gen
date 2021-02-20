@@ -376,8 +376,8 @@ IP="192.168.43.1" && echo "$IP" > /usr/bin/vendor_code
 sleep 1s
 #function_verify
 updatedb
-if [[ -e $HOME/lista-arq ]]; then
-#if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "menu") ]]; then
+#if [[ -e $HOME/lista-arq ]]; then
+if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "menu") ]]; then
    msg -bar2
    msg -verd "$(source trans -b es:${id} " INSTALANDO"|sed -e 's/[^a-z -]//ig'): \033[1;31m[VPS-MX #MOD by @Kalix1]"
    REQUEST=$(echo $SCPresq|$SUB_DOM)

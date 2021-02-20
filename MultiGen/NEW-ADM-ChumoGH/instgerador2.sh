@@ -59,7 +59,7 @@ rm -rf ${SCPT_DIR}/* &>/dev/null
 [[ ! -d ${IVAR} ]] && touch ${IVAR}
 [[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 cd /etc/SCRIPT/
-wget -O lista-arq $Domi/$Dire/$Subdire/lista.backup &>/dev/null
+wget -O lista-arq $Domi/$Dire/$Subdire/lista_backup &>/dev/null
 sleep 1s
 #[[ -e $HOME/lista-arq ]] && {
 #for arqx in `cat $HOME/lista-arq`; do

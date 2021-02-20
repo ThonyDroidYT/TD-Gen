@@ -45,7 +45,7 @@ apt-get install grep -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "grep"|head -1) ]] && ESTATUS=`echo -e "\033[92mINSTALADO"` &>/dev/null
 echo -e "\033[97m    # apt-get install grep............ $ESTATUS "
 #net-tools
-SCPresq="
+SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Rob255RHJvaWRZVC9URC1HZW4vbWFzdGVyL011bHRpR2VuL1ZQUy1NWC04LjMvU0NSSVBU"
 apt-get install net-tools -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "net-tools"|head -1) ]] || ESTATUS=`echo -e "\033[91mFALLO DE INSTALACION"` &>/dev/null
 [[ $(dpkg --get-selections|grep -w "net-tools"|head -1) ]] && ESTATUS=`echo -e "\033[92mINSTALADO"` &>/dev/null

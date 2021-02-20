@@ -12,7 +12,7 @@ tar -xf pytransform.tar > /dev/null 2>&1
 rm -rf pytransform.tar > /dev/null 2>&1
 cd
 echo -ne '\e[97mCARGANDO:\033[1;37m\e[93m ######################         (75%)\r'
-wget https://www.dropbox.com/s/ategazictan3mqc/VPS-MX.py -O /usr/bin/VPS-MX &> /dev/null
+wget https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX-8.3/VPS-MX.py -O /usr/bin/VPS-MX &> /dev/null
 chmod +x /usr/bin/VPS-MX
 echo -ne '\e[97mCARGANDO:\033[1;37m\e[93m ############################## (100%)\r'
 echo -ne '\n'

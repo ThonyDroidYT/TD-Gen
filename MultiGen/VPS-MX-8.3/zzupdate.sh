@@ -31,7 +31,7 @@ DOWEEK="$(date +'%u')"
 HOSTNAME="$(hostname)"
 
 Link1="https://raw.githubusercontent.com/ThonyDroidYT"
-Link2="TD-Gen/master/MultiGen/VPS-MX-8.3/VPS-MX(verificador%20key).sh"
+Link2="TD-Gen/master/MultiGen/VPS-MX-8.3/VPS-MX(verificadorkey).sh"
 ## Absolute path to this script, e.g. /home/user/bin/foo.sh
 SCRIPT_FULLPATH=$(readlink -f "$0")
 SCRIPT_HASH=`md5sum ${SCRIPT_FULLPATH} | awk '{ print $1 }'`

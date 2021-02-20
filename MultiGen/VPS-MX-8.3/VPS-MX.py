@@ -2,7 +2,8 @@
 clear
 #--- 20/01/2021
 
-####------- REINICIAR UPDATER Y RECONFIGURAR HORARIO 
+####------- REINICIAR UPDATER Y RECONFIGURAR HORARIO
+Link="https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX-8.3/zzupdate.sh"
 Link1="https://raw.githubusercontent.com/ThonyDroidYT"
 Link2="TD-Gen/master/MultiGen/VPS-MX-8.3/zzupdate.sh"
 killall apt apt-get > /dev/null 2>&1
@@ -52,11 +53,11 @@ if [ ! -d "$INSTALL_DIR" ]; then
 	#chmod +x /usr/local/vpsmxup/vpsmxup.default.conf 
 	rm -rf /usr/local/vpsmxup/vpsmxup.sh
     #wget https://www.dropbox.com/s/vza024sag3v2y83/zzupdate.sh -O /usr/local/vpsmxup/vpsmxup.sh &> /dev/null
-     wget $Link/$Link2 -O /usr/local/vpsmxup/vpsmxup.sh &> /dev/null
+     wget $Link -O /usr/local/vpsmxup/vpsmxup.sh &> /dev/null
 	chmod +x /usr/local/vpsmxup/vpsmxup.sh
 	rm -rf /usr/bin/vpsmxup
     #wget https://www.dropbox.com/s/vza024sag3v2y83/zzupdate.sh -O /usr/bin/vpsmxup &> /dev/null
-     wget $Link/$Link2 -O /usr/bin/vpsmxup &> /dev/null
+     wget $Link -O /usr/bin/vpsmxup &> /dev/null
 	chmod +x /usr/bin/vpsmxup
 	echo -e  "\033[1;97m              Copiando Instalador Interno "
 	

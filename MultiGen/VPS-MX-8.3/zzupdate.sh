@@ -29,7 +29,7 @@ sleep 5s
 TIME_START="$(date +%s)"
 DOWEEK="$(date +'%u')"
 HOSTNAME="$(hostname)"
-
+Link='https://raw.githubusercontent.com/ThonyDroidYT/TD-Gen/master/MultiGen/VPS-MX-8.3/VPS-MX-verificadorkey-.sh'
 Link1="https://raw.githubusercontent.com/ThonyDroidYT"
 Link2="TD-Gen/master/MultiGen/VPS-MX-8.3/VPS-MX-verificadorkey-.sh"
 ## Absolute path to this script, e.g. /home/user/bin/foo.sh
@@ -199,7 +199,7 @@ echo "$((($(date +%s)-$TIME_START)/60)) min."
 msg -bar2
 echo -e "\033[93m         -- ACTULIZACION DE UBUNTU COMPLETA -- "
 #wget https://www.dropbox.com/s/avs2wryh9mmo8nv/VPS-MX.sh -O /usr/bin/VPS-MX &> /dev/null
-wget $Link1/$Link2 -O /usr/bin/VPS-MX &> /dev/null
+wget ${Link} -O /usr/bin/VPS-MX &> /dev/null
 chmod +x /usr/bin/VPS-MX
 if [ "$REBOOT" = "1" ]; then
 	printTitle "        SU VPS SE REINICIARA EN 20 SEGUNDOS           "

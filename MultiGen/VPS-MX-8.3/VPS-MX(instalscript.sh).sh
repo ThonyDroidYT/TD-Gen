@@ -1,5 +1,6 @@
 #!/bin/bash
 #--UPDATE 22-01-2021
+#--CRACKEADO 20-02-2021
 clear
 echo -ne '\e[97mCARGANDO:\033[1;37m\e[93m #######                        (25%)\r'
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin

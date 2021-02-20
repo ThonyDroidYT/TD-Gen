@@ -378,7 +378,7 @@ sleep 1s
 #function_verify
 updatedb
 #if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
-if [[ -e $HOME/lista-arq ]] && then
+if [[ -e $HOME/lista-arq ]] then
    msg -bar2
    msg -verd "$(source trans -b es:${id} " INSTALANDO"|sed -e 's/[^a-z -]//ig'): \033[1;31m[VPS-MX #MOD by @Kalix1]"
    REQUEST=$(echo $SCPresq|$SUB_DOM)

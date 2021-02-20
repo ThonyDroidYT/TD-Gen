@@ -362,8 +362,8 @@ exit 1
 }
 #while [[ ! $Key ]]; do
 msg -bar2 && msg -ne "# DIGITE LA KEY #: " #&& read Key
-tput cuu1 && tput dl1
-done
+#tput cuu1 && tput dl1
+#done
 msg -ne "# Verificando Key # : "
 cd $HOME
 #wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;32m Key Completa" || {

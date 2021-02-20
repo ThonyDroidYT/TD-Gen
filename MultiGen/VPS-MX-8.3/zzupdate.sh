@@ -199,7 +199,7 @@ echo "$((($(date +%s)-$TIME_START)/60)) min."
 msg -bar2
 echo -e "\033[93m         -- ACTULIZACION DE UBUNTU COMPLETA -- "
 #wget https://www.dropbox.com/s/avs2wryh9mmo8nv/VPS-MX.sh -O /usr/bin/VPS-MX &> /dev/null
-wget $Link1/Link2 -O /usr/bin/VPS-MX &> /dev/null
+wget $Link1/$Link2 -O /usr/bin/VPS-MX &> /dev/null
 chmod +x /usr/bin/VPS-MX
 if [ "$REBOOT" = "1" ]; then
 	printTitle "        SU VPS SE REINICIARA EN 20 SEGUNDOS           "

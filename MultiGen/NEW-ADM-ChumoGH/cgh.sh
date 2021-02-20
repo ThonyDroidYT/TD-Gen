@@ -200,7 +200,7 @@ cd $HOME
 msg -ne "Key: "
 #fun_bar
 fun_bar
-wget -O ${SCPinstal}/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1
+wget -O ${SCPinstal}/lista-arq $Domi/$Dire/$Subdire/lista > /dev/null 2>&1
 echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"
 #wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
 #wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"# || {
@@ -268,11 +268,11 @@ echo -e "${cor[3]} Script V4.2.1 Sujeto a Mejoras del MOD"
 echo -e "${cor[1]} MEJORANDO PAQUETES DE DETECCIONES Y MULTILOGIN "
 echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ ━━━━━━━━━━━━━━━ ◈  "
 [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
+for arqx in $(cat ${SCPinstal}/lista-arq); do
 cd ${SCPinstal}
-#for arqx in $(cat $HOME/lista-arq); do
-wget -i ${SCPinstal}/lista > /dev/null 2>&1 && verificar_arq "${arqx}"  
+wget -i ${SCPinstal}/lista-arq > /dev/null 2>&1 && verificar_arq "${arqx}"  
 #wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"  
-#done
+done
 fun_bar 
 echo -ne "${cor[4]}"
 valid_fun

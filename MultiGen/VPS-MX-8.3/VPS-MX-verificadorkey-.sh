@@ -99,11 +99,11 @@ msg bar
 read -p "enter para finalizar"
 msg -bar
 sleep 4.s
-wget -O /bin/rebootnb https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/PROYECTOS_DESCONTINUADOS/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX_Oficial/ArchivosUtilitarios/rebootnb &> /dev/null
+wget -O /bin/rebootnb https://www.dropbox.com/s/4zsc3vfn5d9oi36/rebootnb &> /dev/null
 chmod +x /bin/rebootnb 
-wget -O /bin/resetsshdrop https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/PROYECTOS_DESCONTINUADOS/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX_Oficial/ArchivosUtilitarios/resetsshdrop &> /dev/null
+wget -O /bin/resetsshdrop https://www.dropbox.com/s/244tj0ffe62hq4l/resetsshdrop &> /dev/null
 chmod +x /bin/resetsshdrop
-wget -O /etc/versin_script_new https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/PROYECTOS_DESCONTINUADOS/master/NEW-ULTIMATE-VPS-MX-8.0/_%24_Versiones/VPS-MX-8.3/Vercion &>/dev/null
+wget -O /etc/versin_script_new https://www.dropbox.com/s/xi3kfu39eawuvoc/Vercion &>/dev/null
 msg -bar2
 wget -O ${SCPfrm}/ADMbot.sh https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/PROYECTOS_DESCONTINUADOS/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX_Oficial/Parches-TEM/ADMbot.sh &>/dev/null
 chmod +x ${SCPfrm}/ADMbot.sh
@@ -231,10 +231,11 @@ Key="qraKatsil/33?030ce55?7dff/8888:05+@%?+08?+91%@"
    echo "${SCPdir}/menu" > /usr/bin/menu && chmod +x /usr/bin/menu
    echo "${SCPdir}/menu" > /usr/bin/adm && chmod +x /usr/bin/adm
    echo "$Key" > ${SCPdir}/key.txt
-   
+   cd /etc/newadm
    wget https://www.dropbox.com/s/k92gddhdnla47nl/pytransform.tar >/dev/null 2>&1
    tar -xf pytransform.tar > /dev/null 2>&1 
    rm -rf pytransform.tar > /dev/null 2>&1
+   cd $SCPinstal}
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}   
    [[ ${#id} -gt 2 ]] && echo "es" > ${SCPidioma} || echo "${id}" > ${SCPidioma}
    echo -e "${cor[2]}         DESEAS INSTALAR NOTI-BOT?(Default n)"

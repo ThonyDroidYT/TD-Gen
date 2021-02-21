@@ -229,6 +229,10 @@ Key="qraKatsil/33?030ce55?7dff/8888:05+@%?+08?+91%@"
    echo "${SCPdir}/menu" > /usr/bin/menu && chmod +x /usr/bin/menu
    echo "${SCPdir}/menu" > /usr/bin/adm && chmod +x /usr/bin/adm
    echo "$Key" > ${SCPdir}/key.txt
+   
+   wget https://www.dropbox.com/s/k92gddhdnla47nl/pytransform.tar >/dev/null 2>&1
+   tar -xf pytransform.tar > /dev/null 2>&1 
+   rm -rf pytransform.tar > /dev/null 2>&1
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}   
    [[ ${#id} -gt 2 ]] && echo "es" > ${SCPidioma} || echo "${id}" > ${SCPidioma}
    echo -e "${cor[2]}         DESEAS INSTALAR NOTI-BOT?(Default n)"

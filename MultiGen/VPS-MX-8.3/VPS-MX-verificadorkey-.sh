@@ -377,7 +377,7 @@ sleep 1s
 #function_verify
 updatedb
 #if [[ -e $HOME/lista-arq ]]; then
-if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "menu") ]]; then
+#if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "menu") ]]; then
    msg -bar2
    msg -verd "$(source trans -b es:${id} " INSTALANDO"|sed -e 's/[^a-z -]//ig'): \033[1;31m[VPS-MX #MOD by @Kalix1]"
    REQUEST=$(echo $SCPresq|$SUB_DOM)
@@ -414,7 +414,7 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "menu") ]]; then
    [[ "$NOTIFY" = "s" || "$NOTIFY" = "S" ]] && NOTIFY
    msg -bar2
    [[ ${byinst} = "true" ]] && install_fim
-else
-invalid_key
-fi
+#else
+#invalid_key
+#fi
 rm -rf VPS-MX

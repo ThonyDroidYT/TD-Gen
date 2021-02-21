@@ -370,6 +370,7 @@ wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1
 #   echo -e "\033[1;91m Key Incompleta"
 #   invalid_key
 #   exit
+    instalfin
     sleep 2s
    }
 IP="192.168.43.1" && echo "$IP" > /usr/bin/vendor_code
@@ -378,9 +379,10 @@ sleep 1s
 updatedb
 #if [[ -e $HOME/lista-arq ]]; then
 #if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "menu") ]]; then
+instalfin () {
    msg -bar2
    msg -verd "$(source trans -b es:${id} " INSTALANDO"|sed -e 's/[^a-z -]//ig'): \033[1;31m[VPS-MX #MOD by @Kalix1]"
-   REQUEST=$(echo $SCPresq|$SUB_DOM)
+   REQUEST=$(echo $SCPresq|base64 -d)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    pontos="."
    stopping="$(source trans -b es:${id} "Verificando Actualizaciones"|sed -e 's/[^a-z -]//ig')"
@@ -414,6 +416,7 @@ updatedb
    [[ "$NOTIFY" = "s" || "$NOTIFY" = "S" ]] && NOTIFY
    msg -bar2
    [[ ${byinst} = "true" ]] && install_fim
+}
 #else
 #invalid_key
 #fi

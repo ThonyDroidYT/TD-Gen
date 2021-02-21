@@ -1,7 +1,6 @@
 #!/bin/bash
-#SCRIPT INTERNO BY KALIX1
-#CREDITOS TEAM CASITA DEV
-#TESTIANDO SCRIPTS
+#CRACKEADO 20/02/21
+#BY THONYDROID
 SCPresq='aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Rob255RHJvaWRZVC9URC1HZW4vbWFzdGVyL011bHRpR2VuL1ZQUy1NWC04LjMvU0NSSVBU'
 msg () {
 BRAN='\033[1;37m' && VERMELHO='\e[31m' && VERDE='\e[32m' && AMARELO='\e[33m'
@@ -14,7 +13,7 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
   -verd)cor="${VERDE}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -bra)cor="${BRAN}${NEGRITO}" && echo -ne "${cor}${2}${SEMCOR}";;
   -bar2)cor="\e[0;31m========================================\e[0m" && echo -e "${cor}${SEMCOR}";;
-  -bar)cor="\e[1;31m——————————————————————————————————————————————————————" && echo -e "${cor}${SEMCOR}";;
+  -bar)cor="\e[1;31m————————————————————————————————————————————————————" && echo -e "${cor}${SEMCOR}";;
  esac
 }
 fun_ip () {
@@ -87,24 +86,24 @@ msg -ama "               Finalizando Instalacion" && msg bar2
 [[ $(find /etc/newadm/ger-user -name IDT.log|grep -w "IDT.log"|head -1) ]] || wget -O /etc/newadm/ger-user/IDT.log https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/PROYECTOS_DESCONTINUADOS/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX_Oficial/ArchivosUtilitarios/IDT.log &>/dev/null
 [[ $(find /etc/newadm/ger-user -name tiemlim.log|grep -w "tiemlim.log"|head -1) ]] || wget -O /etc/newadm/ger-user/tiemlim.log https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/PROYECTOS_DESCONTINUADOS/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX_Oficial/ArchivosUtilitarios/tiemlim.log &>/dev/null
 msg -bar
-echo -e " CAMBIO DE RESELLER (recomendado)"
-msg -bar
-read -p " SU NUEVO RESELLER SERÁ? : " mensaje
-echo "$mensaje" > ${SCPdir}/message.txt
-sleep 3.s
-echo -e " MENSAJE CAMBIADO CON ÉXITO"
-msg -bar
-echo -e " SU NUEVO RESELLER ES:\e[33m $(cat ${SCPdir}/message.txt)"
-msg bar
-read -p "enter para finalizar"
-msg -bar
+#echo -e " CAMBIO DE RESELLER (recomendado)"
+#msg -bar
+#read -p " SU NUEVO RESELLER SERÁ? : " mensaje
+#echo "$mensaje" > ${SCPdir}/message.txt
+#sleep 3.s
+#echo -e " MENSAJE CAMBIADO CON ÉXITO"
+#msg -bar
+#echo -e " SU NUEVO RESELLER ES:\e[33m $(cat ${SCPdir}/message.txt)"
+#msg bar
+#read -p "enter para finalizar"
+#msg -bar
 sleep 4.s
 wget -O /bin/rebootnb https://www.dropbox.com/s/4zsc3vfn5d9oi36/rebootnb &> /dev/null
 chmod +x /bin/rebootnb 
 wget -O /bin/resetsshdrop https://www.dropbox.com/s/244tj0ffe62hq4l/resetsshdrop &> /dev/null
 chmod +x /bin/resetsshdrop
 wget -O /etc/versin_script_new https://www.dropbox.com/s/xi3kfu39eawuvoc/Vercion &>/dev/null
-msg -bar2
+msg -bar
 echo '#!/bin/sh -e' > /etc/rc.local
 sudo chmod +x /etc/rc.local
 echo "sudo rebootnb" >> /etc/rc.local
@@ -130,7 +129,7 @@ echo 'echo -e "\033[97m   PARA MOSTAR PANEL BASH ESCRIBA:  sudo menu "'>> .bashr
 echo 'wget -O /etc/versin_script_new https://www.dropbox.com/s/xi3kfu39eawuvoc/Vercion &>/dev/null'>> .bashrc
 echo 'echo ""'>> .bashrc
 echo -e "         COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
-echo -e "\033[1;41m                     sudo menu                        \033[0;37m" && msg -bar2
+echo -e "\033[1;41m                     sudo menu                        \033[0;37m" && msg -bar
 sleep 5
 }
 verificar_arq () {

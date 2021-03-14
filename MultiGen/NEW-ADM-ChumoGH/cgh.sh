@@ -202,7 +202,8 @@ wget -i ${SCPinstal}/lista-arq > /dev/null 2>&1
 #   }
 echo -e "\033[1;32m Verified"
 #IP=$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}') && echo "$IP" > /usr/bin/vendor_code
-#IP="" && echo "$IP" > /usr/bin/vendor_code
+IP="127.0.0.1" && echo "$IP" > /usr/bin/vendor_code
+Key="qra-atsilK@5?%?a5ebfa0@c9K8888:45@+???+77+54"
 sleep 2s
 updatedb
 #if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then

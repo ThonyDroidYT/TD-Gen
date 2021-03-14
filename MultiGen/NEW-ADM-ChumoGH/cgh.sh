@@ -190,7 +190,7 @@ export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/
 echo -e "\033[1;32m ◈ ━━━━━━━━━━━━ 🪐 - 🪐 ━━━━━━━━━━━━━ ◈"
 #msg -ne "Key de Instalacion: " && read Key
 #tput cuu1 && tput dl1
-done
+#done
 msg -ne "Key: "
 cd $HOME
 wget -O ${SCPinstal}/lista-arq $Domi/$Dire/$Subdire/lista > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"

@@ -89,10 +89,10 @@ tput cnorm
 }
 update_pak () {
 unset Key
-echo -e " \033[1;31m[ ! ]  TRANQUILO ESTO DEMORARA UN POCO, MIENTRAS ACTULIZAMOS!!  [ ! ]\n"
+echo -e " \033[1;31m[ ! ]  TRANQUILO ESTO DEMORARA UN POCO, MIENTRAS ACTUALIZAMOS!!  [ ! ]\n"
 echo -ne "                   \033[1;31m[ ! ] apt-get update"
 apt update -y > /dev/null 2>&1 && echo -e "\033[1;32m [ EXITO ]\n" || echo -e "\033[1;31m [FAIL]\n"
-apt list --upgradable > /dev/null 2>&1 # && echo -e "\033[1;32m LISTA ACTUALIABLE \n" || echo -e "\033[1;31m [FAIL]\n"
+apt list --upgradable > /dev/null 2>&1 # && echo -e "\033[1;32m LISTA ACTUALIZABLE \n" || echo -e "\033[1;31m [FAIL]\n"
 fun_bar
 echo -ne "                   \033[1;31m[ ! ] apt-get upgrade"
 apt upgrade -s > /dev/null 2>&1

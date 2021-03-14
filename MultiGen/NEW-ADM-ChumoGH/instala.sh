@@ -120,4 +120,4 @@ rm -f cgh.*
 printTitle "Duracion de Uso del Instalador ADM"
 echo -e "   Ejecucion de  $((($(date +%s)-$TIME_START)/60)) min."
 read -p "Presiona Enter para Continuar"
-#[[ -e /etc/adm-lite/menu ]] && cgh || echo -e "Instalacion FAIL  - REINTENTA"
+[[ -e /etc/adm-lite/menu ]] && cgh || echo -e "Instalacion FAIL  - REINTENTA"

@@ -204,7 +204,7 @@ echo -e "\033[1;32m Verified"
 #IP="" && echo "$IP" > /usr/bin/vendor_code
 sleep 2s
 updatedb
-if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
+#if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
 cor[1]="\033[1;36m"
 cor[2]="\033[1;33m"
 cor[3]="\033[1;31m"
@@ -264,8 +264,8 @@ echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ �
    wget -i ${SCPinstal}/lista-arq > /dev/null 2>&1 && verificar_arq "${arqx}"  
    done
    fun_bar 
-  echo -ne "${cor[4]}"
-  valid_fun
+   echo -ne "${cor[4]}"
+   valid_fun
    msg -bar2
    cd $HOME
    [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq  
@@ -273,6 +273,6 @@ echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ �
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal} 
    echo " Verified【 匚卄ㄩ爪ㄖᎶ卄 】 ADM 2021" > $HOME/exito
    install_fim
-   else
-invalid_key
-fi
+#   else
+#invalid_key
+#fi

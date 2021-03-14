@@ -5,6 +5,7 @@ killall apt apt-get &> /dev/null
 dom='base64 -d'
 cd $HOME
 rm -f instala.* > /dev/null
+Dire="s"
 [[ $(dpkg --get-selections|grep -w "gawk"|head -1) ]] || apt-get install gawk -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "mlocate"|head -1) ]] || apt-get install mlocate -y &>/dev/null
 rm $(pwd)/$0 &> /dev/null
@@ -31,6 +32,7 @@ fecha=`date +"%d-%m-%y"`;
 dom='base64 -d'
 SCPdir="/etc/adm-lite"
 SCPinstal="$HOME/install"
+Domi="https://www.dropbox.com"
 SCPidioma="${SCPdir}"
 SCPusr="${SCPdir}"
 SCPfrm="${SCPdir}"
@@ -102,7 +104,7 @@ echo -e " LOLCAT - FIGLET - COWSAY - TOILET INSTALADOS CORRECTAMENTE "| lolcat
 function_verify () {
   echo "verify" > $(echo -e $(echo 2f62696e2f766572696679737973|sed 's/../\\x&/g;s/$/ /'))
 }
-
+Subdire="p5v2hevrfj3pdxb"
 instalar_fun () {
 cd /etc/adm-lite && bash cabecalho --instalar
 }
@@ -181,17 +183,19 @@ cat error.log | lolcat
 exit
 }
 
-while [[ ! $Key ]]; do
+#while [[ ! $Key ]]; do
 clear
 cowsay -f stegosaurus "BIENVENIDO Y GRACIAS POR UTILIZAR - - - - - - - -【 ★ ChumoGH ★ 】 ADM 2021 "| lolcat
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/games;
 echo -e "\033[1;32m ◈ ━━━━━━━━━━━━ 🪐 - 🪐 ━━━━━━━━━━━━━ ◈"
-msg -ne "Key de Instalacion: " && read Key
-tput cuu1 && tput dl1
+#msg -ne "Key de Instalacion: " && read Key
+#tput cuu1 && tput dl1
 done
 msg -ne "Key: "
 cd $HOME
-wget -O ${SCPinstal}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"
+wget -O ${SCPinstal}/lista-arq $Domi/$Dire/$Subdire/lista > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]"
+[[ -e "${SCPinstal}/gerar.sh" ]] && rm ${SCPinstal}/gerar.sh
+[[ -e "${SCPinstal}/http-server.py" ]] && rm ${SCPinstal}/http-server.py
 #wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && echo -e "\033[1;34m [ \033[1;32mVERIFICANDO\033[1;34m ]" || {
 #   invalid_key
 #   }

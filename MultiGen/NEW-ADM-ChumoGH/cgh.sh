@@ -259,10 +259,10 @@ echo -e "${cor[1]}◈ ━━━━━━━━━━━━━━━ ⸙ - ⸙ �
    REQUEST=$(ofus "$Key"|cut -d'/' -f2)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    #for arqx in $(cat $HOME/lista-arq); do
-   for arqx in $(ls ${SCPinstal}); do
+   #for arqx in $(ls ${SCPinstal}); do
    #wget -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}"
-   wget -i ${SCPinstal}/lista-arq > #/dev/null 2>&1 && verificar_arq "${arqx}"  
-   done
+   wget -i ${SCPinstal}/lista-arq > /dev/null 2>&1 #&& verificar_arq "${arqx}"  
+   #done
    fun_bar 
    echo -ne "${cor[4]}"
    valid_fun

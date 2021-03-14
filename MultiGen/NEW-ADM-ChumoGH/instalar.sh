@@ -29,10 +29,12 @@ done
 echo -e "\033[1;33m]\033[1;31m -\033[1;32m 100%\033[1;37m"
 }
 
+Domi="https://www.dropbox.com"
 instalar_fun () {
 cd /etc/adm-lite && bash cabecalho --instalar
 }
 
+Dire="s"
 elimined_fun () {
 text=$(source trans -b pt:${id} "Instalando")
 echo -e "${cor[2]} Update"
@@ -163,7 +165,8 @@ if [[ $key = $key2 ]];
 	  echo -ne "${cor[4]}"
 	  echo -e "${cor[1]}MEJORANDO PAQUETES DE DETECCIONES Y MULTILOGIN "
 	  #wget -O lista https://raw.githubusercontent.com/ChumoGH/chumogh-gmail.com/master/lista -o /dev/null
-          wget -O lista $Domi/Dire/Subdire/lista > /dev/null
+          cd $HOME
+          wget -O lista-arq $Domi/$Dire/$Subdire/lista &>/dev/null
 	  valid_fun
 	else
 	  rm -f setup.sh

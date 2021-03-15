@@ -158,8 +158,6 @@ cd chumogh
 key="qra-atsilK@5?%?a5ebfa0@c9K8888:45@+???+77+54"
 key2="qra-atsilK@5?%?a5ebfa0@c9K8888:45@+???+77+54"
 rm -rf chumogh
-if [[ $key = $key2 ]];
-	then
 	  mkdir /etc/chumogh/
 	  echo "CGH-"#$key"ChumoGH" > /etc/chumogh/exito
 	  echo -ne "${cor[4]}"
@@ -168,11 +166,7 @@ if [[ $key = $key2 ]];
           cd $HOME
           wget -O lista-arq $Domi/$Dire/$Subdire/lista &>/dev/null
 	  valid_fun
-	else
 	  rm -f setup.sh
 	  rm -f instala.sh
 	  rm -f /bin/cgh
 	  rm -f /bin/menu
-	  echo "Key Invalida, Contacta con el Desarrolador"
-	  key=null
-	fi

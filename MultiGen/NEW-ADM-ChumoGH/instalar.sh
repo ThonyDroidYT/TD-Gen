@@ -151,10 +151,6 @@ echo -e "${cor[3]} "Script sujeto a mejoras"
 echo -e "${cor[1]} MEJORANDO PAQUETES DE DETECCIONES Y MULTILOGIN "
 echo -e "${cor[1]}●●●●●● ●●●●●● ●●●●●● ●●●●●● ●●●●●● ●●●●●● ●●●●●● ●●●●●● "
 #echo -ne " KEY: "; read key
-mkdir chumogh
-cd chumogh
-#wget -q http://35.183.107.139:81/chumogh.val
-#validar=$(cat < chumogh.val)
 key="qra-atsilK@5?%?a5ebfa0@c9K8888:45@+???+77+54"
 key2="qra-atsilK@5?%?a5ebfa0@c9K8888:45@+???+77+54"
 rm -rf chumogh

@@ -85,7 +85,7 @@ clear
 chmod 777 /usr/bin/gerar.sh &>/dev/null
 chmod 777 /bin/http-server.py &>/dev/null
 chmod 777 /etc/SCRIPT/* &>/dev/null
-echo -e "\033[1;31m- \033[1;32mRecebido Con Éxito! \033[0m"
+echo -e "\033[1;36mArchivos \033[1;31m- \033[1;32mRecebido Con Éxito! \033[0m"
 #[[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 #} || echo -e "\033[1;31m- \033[1;31mFalla (no recebido!)"
 #done
